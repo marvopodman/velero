@@ -43,7 +43,7 @@ module "eks" {
     # One access entry with a policy associated
     user-access = {
       kubernetes_groups = []
-      principal_arn     = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
+      principal_arn     = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/adminyekus"
 
       policy_associations = {
         admin_user = {

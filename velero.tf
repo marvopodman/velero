@@ -6,6 +6,7 @@ resource "random_string" "random" {
 
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.1.0"
 
   bucket = "valero-bucket-${random_string.random.result}"
   acl    = "private"
